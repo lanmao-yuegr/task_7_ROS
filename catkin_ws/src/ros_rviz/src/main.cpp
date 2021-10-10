@@ -1,6 +1,5 @@
 #include "ros_rviz.h"
 #include <ros/ros.h>
-//#include <tf/transform_broadcaster.h>
 #include <tf/transform_datatypes.h>
 #include <visualization_msgs/Marker.h>
 
@@ -116,16 +115,16 @@ int main(int argc, char **argv)
         marker.id = 0;
         marker.type = visualization_msgs::Marker::CUBE;
         marker.action = visualization_msgs::Marker::ADD;
-        marker.pose.position.x = tvec.at<float>(0, 0) / 1000;
-        marker.pose.position.y = tvec.at<float>(1, 0) / 1000;
-        marker.pose.position.z = tvec.at<float>(2, 0) / 1000;
+        marker.pose.position.x = tvec.at<float>(0, 0)/100;
+        marker.pose.position.y = tvec.at<float>(1, 0)/100;
+        marker.pose.position.z = tvec.at<float>(2, 0)/100;
         marker.pose.orientation.x = q.x();
         marker.pose.orientation.y = q.y();
         marker.pose.orientation.z = q.z();
         marker.pose.orientation.w = q.w();
-        marker.scale.x = 0.0675;
-        marker.scale.y = 0.01;
-        marker.scale.z = 0.0265;
+        marker.scale.x = 0.675;
+        marker.scale.y = 0.1;
+        marker.scale.z = 0.265;
         marker.color.a = 1.0;
         marker.color.r = 0.0;
         marker.color.g = 1.0;
